@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body, html {
+    background-color: #111;
+}
+
+#app {
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ccc;
+    box-shadow: 0 0 20px rgba(141, 141, 141, 0.65);
+    width: 96%;
+    max-width: 500px;
+}
+
+#app > h2 {
+    margin-bottom: 40px;
+    font-size: 35px;
+    text-align: center;
+}
+
+.todo-list {
+    height: 300px;
+    overflow-y: auto;
+    background-color: #f1f1f1;
+    margin-top: 30px;
+}
+
+.todo-list ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.todo-single {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: black;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.todo-single input {
+    width: 30px;
+    height: 30px;
+}
+
+.todo-single i {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.todo-single .todo-inf {
+    width: 100%;
+}
+
+.todo-single:last-child {
+    margin-bottom: 0;
+}
+
+.todo-form {
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.todo-form p {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.input-wraper {
+    margin-bottom: 10px;
+}
+
+.input-wraper:last-child {
+    margin-bottom: 0;
+}
+
+.input-wraper label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.input-wraper input[type=text] {
+    border: 0;
+    border-bottom: 1px solid #c2c2c2;
+    padding: 8px;
+    width: 100%;
+    outline: 0;
+    background-color: white;
+    transition: border-bottom 0.3s;
+}
+
+.input-wraper input[type=text]:focus {
+    border-bottom: 1px solid #575757;
+}
+
+.input-wraper button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+    border: 0;
+    border-bottom: 3px solid #00c853;
+    background-color: #69f0ae;
+    transition: background-color 0.5s;
+    font-size: 17px;
+}
+
+.input-wraper button:hover {
+    background-color: #00c853;
+}
+
+.danger-btn {
+    color: #d84315;
+}
+
+.orange-btn {
+    color: #0277bd;
+}
