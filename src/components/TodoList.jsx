@@ -42,7 +42,7 @@ function TodoList () {
                                         updateCheckboxTodo(todo.id, isChecked);
                                     }}
                                 />
-                                <Link to={`/updateTodo/${todo.id}`}><i className="blue-btn"><FontAwesomeIcon icon={faPen} /></i></Link>
+                                <Link to={`/to-do-list-react/updateTodo/${todo.id}`}><i className="blue-btn"><FontAwesomeIcon icon={faPen} /></i></Link>
 
                                 <i 
                                     className="danger-btn"

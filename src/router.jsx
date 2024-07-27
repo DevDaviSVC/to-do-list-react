@@ -5,7 +5,7 @@ import RootLayout from "./pages/RootLayout";
 
 const router = createBrowserRouter([
     {
-        path: '/',
+        path: '/to-do-list-react/',
         element: <RootLayout />,
         children: [
             {

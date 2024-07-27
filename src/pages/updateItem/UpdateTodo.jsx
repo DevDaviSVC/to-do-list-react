@@ -22,12 +22,12 @@ function UpdateTodo () {
 
     return (
         <div className="update-todo-form">
-            <Link to='/'><div className="leave-btn"><FontAwesomeIcon icon={faXmark} /></div></Link>
+            <Link to='/to-do-list-react/'><div className="leave-btn"><FontAwesomeIcon icon={faXmark} /></div></Link>
             <h2>Atualizando tarefa: {todoReq.name}</h2>
             <form onSubmit={(e) => {
                 e.preventDefault();
                 updateTodo(todoToUpdate);
-                navigate('/');
+                navigate('/to-do-list-react/');
             }}> 
                 <div className="input-wraper">
                     <label htmlFor="name">Nome</label>
