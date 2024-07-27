@@ -65,6 +65,10 @@ body, html {
     width: 100%;
 }
 
+.todo-single .todo-inf p {
+    margin-top: 5px;
+}
+
 .todo-single:last-child {
     margin-bottom: 0;
 }
@@ -126,6 +130,29 @@ body, html {
     color: #d84315;
 }
 
-.orange-btn {
+.blue-btn {
     color: #0277bd;
+}
+
+.update-todo-form {
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.update-todo-form > h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.update-todo-form .leave-btn {
+    position: absolute;
+    top: 0px;
+    right: 4px;
+    font-size: 25px;
+}
+
+@keyframes fromTopToCenter {
+    from {top: 0px}
+    to {top: 50%}
 }

@@ -1,13 +1,11 @@
-import TodoList from "./components/TodoList";
+import { RouterProvider } from "react-router-dom";
 import { TodoListContextProvider } from "./contexts/TodoListContext";
+import router from "./router";
 
 export default function App () {
   return (
     <TodoListContextProvider>
-      <div id="app">
-        <h2>Todo-list App</h2>
-        <TodoList />
-      </div>
+      <RouterProvider router={router} />
     </TodoListContextProvider>
   )
 }

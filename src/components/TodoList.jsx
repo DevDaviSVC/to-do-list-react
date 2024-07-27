@@ -4,6 +4,7 @@ import TodoForm from "./NewTodoForm";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
 import { faPen } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 function TodoList () {
     const { todoList, addTodo, updateCheckboxTodo, deleteTodo } = useTodoList();
@@ -41,7 +42,7 @@ function TodoList () {
                                         updateCheckboxTodo(todo.id, isChecked);
                                     }}
                                 />
-                                <i className="orange-btn"><FontAwesomeIcon icon={faPen} /></i>
+                                <Link to={`/updateTodo/${todo.id}`}><i className="blue-btn"><FontAwesomeIcon icon={faPen} /></i></Link>
 
                                 <i 
                                     className="danger-btn"

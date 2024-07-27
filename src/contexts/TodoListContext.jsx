@@ -8,7 +8,7 @@ export function TodoListContextProvider ({children}) {
         let data = localStorage.getItem('todo-list-react');
 
         if (!data) {
-            localStorage.setItem('todo-list-react', JSON.stringify([new Todo(2, 'teste', 'desc')]));
+            localStorage.setItem('todo-list-react', JSON.stringify([]));
         }
 
         return JSON.parse(data);
@@ -38,11 +38,27 @@ export function TodoListContextProvider ({children}) {
         setTodoList(() => todoList.filter((todo) => todo.id !== id));
     }
 
+    
+    const updateTodo = (updatedTodo) => {
+        setTodoList(currentState => {
+            let newState = currentState.map((todo) => {
+                if (todo.id === updatedTodo.id) {
+                    return updatedTodo;
+                }
+
+                return todo;
+            });
+
+            return newState;
+        })
+    }
+
     const stock = {
         todoList,
         addTodo,
         updateCheckboxTodo,
-        deleteTodo
+        deleteTodo,
+        updateTodo
     }
 
     return (
