@@ -23,7 +23,7 @@ function TodoList () {
     }
 
     return (
-        <div>
+        <div className="todo-wraper">
             <TodoForm handleSubmit={addNewTodo}/>
             <div className="todo-list">
                 <ul>

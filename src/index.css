@@ -16,22 +16,28 @@ body, html {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #ccc;
-    box-shadow: 0 0 20px rgba(141, 141, 141, 0.65);
-    width: 96%;
-    max-width: 500px;
+    box-shadow: 0 0 20px rgba(141, 141, 141, 0.4);
+    width: 90%;
+    max-width: 1000px;
 }
 
 #app > h2 {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-size: 35px;
     text-align: center;
 }
 
+.todo-wraper {
+    display: flex;
+    gap: 40px;
+}
+
 .todo-list {
-    height: 300px;
+    height: 400px;
     overflow-y: auto;
     background-color: #f1f1f1;
-    margin-top: 30px;
+    width: 70%;
+    /* margin-top: 30px; */
 }
 
 .todo-list ul {
@@ -74,6 +80,7 @@ body, html {
 }
 
 .todo-form {
+    width: 40%;
     background-color: #f1f1f1;
     padding: 20px;
 }
@@ -107,7 +114,7 @@ body, html {
     transition: border-bottom 0.3s;
 }
 
-.input-wraper input[type=text]:focus {
+.input-wraper input[type=text]:focus, .input-wraper input[type=text]:hover {
     border-bottom: 1px solid #575757;
 }
 
@@ -137,22 +144,39 @@ body, html {
 .update-todo-form {
     background-color: #f1f1f1;
     padding: 20px;
+    height: 400px;
+    width: 100%;
 }
 
-.update-todo-form > h2 {
+.update-todo-form h2 {
     font-size: 30px;
     margin-bottom: 30px;
     text-align: center;
 }
 
+.update-todo-form form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
 .update-todo-form .leave-btn {
     position: absolute;
     top: 0px;
-    right: 4px;
+    right: 6px;
     font-size: 25px;
 }
 
-@keyframes fromTopToCenter {
-    from {top: 0px}
-    to {top: 50%}
+@media screen and (max-width: 900px) {
+    .todo-wraper {
+        flex-wrap: wrap;
+    }
+    
+    .todo-list {
+        width: 100%;
+    }
+
+    .todo-form {
+        width: 100%;
+    }
 }
