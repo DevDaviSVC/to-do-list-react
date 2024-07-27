@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 body, html {
@@ -168,6 +171,11 @@ body, html {
     color: black;
 }
 
+.done-todo {
+    text-decoration: line-through #444 solid 3px;
+    color: #444;
+}
+
 @media screen and (max-width: 900px) {
     .todo-wraper {
         flex-wrap: wrap;
@@ -175,9 +183,31 @@ body, html {
     
     .todo-list {
         width: 100%;
+        max-height: 20vh;
     }
 
     .todo-form {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .todo-single {
+        gap: 0px;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .todo-single .todo-inf {
+        margin-bottom: 10px;
+    }
+    
+    .todo-single .checkbox-wraper {
+        width: calc(100% / 3);
+    }
+
+    .todo-single a, .todo-single i {
+        width: calc(100% / 3);
+        display: inline-block;
     }
 }

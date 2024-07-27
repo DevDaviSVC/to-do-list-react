@@ -31,17 +31,19 @@ function TodoList () {
                         return (
                             <li className="todo-single" key={todo.id}>
                                 <div className="todo-inf">
-                                    <h2>{todo.name}</h2>
+                                    <h2 className={todo.isDone ? "done-todo" : ""}>{todo.name}</h2>
                                     <p>{todo.description}</p>
                                 </div>
-                                <input 
-                                    type="checkbox"
-                                    checked={todo.isDone}
-                                    onChange={(e) => {
-                                        const isChecked = e.target.checked;
-                                        updateCheckboxTodo(todo.id, isChecked);
-                                    }}
-                                />
+                                <div className="checkbox-wraper">
+                                    <input 
+                                        type="checkbox"
+                                        checked={todo.isDone}
+                                        onChange={(e) => {
+                                            const isChecked = e.target.checked;
+                                            updateCheckboxTodo(todo.id, isChecked);
+                                        }}
+                                    />
+                                </div>
                                 <Link to={`/to-do-list-react/updateTodo/${todo.id}`}><i className="blue-btn"><FontAwesomeIcon icon={faPen} /></i></Link>
 
                                 <i 
